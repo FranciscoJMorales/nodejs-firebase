@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+    <div class="card">
+        <div class="card-header">
+            <h1>Lab 9</h1>
+        </div>
+        <div class="card-body">
+            {{#if datos}}
+            <ul class="list-group">
+                {{#each datos}}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{numero}} - 
+                    {{valor}}
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+                <p>No hay datos</p>
+            {{/if}}
+        </div>
+        <div class="card-footer">
+            <form action="/nuevo" method="POST">
+                <div class="form-group">
+                    <input type="text" name="numero" placeholder="numero" class="form-control" autofocus>
+                </div>
+                <button class="btn btn-primary btn-block">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
